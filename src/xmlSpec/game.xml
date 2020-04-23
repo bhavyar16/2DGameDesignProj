@@ -1,0 +1,185 @@
+<?xml version = "1.0"?>
+<GameData>
+<!-- screenTitle is also used to identify you and your animation. 
+     So make sure to include your name as part of the screenTitle -->
+<screenTitle>Aladin!</screenTitle>
+<maxStringSize>60</maxStringSize>
+
+<frameCap>60</frameCap>
+<framesAreCapped>true</framesAreCapped>
+
+<frameMax>800</frameMax>
+<username>arjunb_bramakr</username>
+<numberOfOrbs>15</numberOfOrbs>
+
+<view>
+  <width>854</width>
+  <height>480</height>
+</view>
+
+<world>
+  <width>3200</width>
+  <height>800</height>
+</world>
+<Sky>
+  <width>3200</width>
+  <height>800</height>
+</Sky>
+<Sky>
+  <file>images/nightsky3.png</file>
+  <red>193</red>
+  <green>205</green>
+  <blue>205</blue>
+  <factor>1</factor>
+  <transparency>true</transparency>
+</Sky>
+<Buildings>
+  <width>3200</width>
+  <height>800</height>
+</Buildings>
+
+<Buildings>
+  <file>images/pyrafinal1.png</file>
+  <red>193</red>
+  <green>205</green>
+  <blue>205</blue>
+  <factor>4</factor>
+  <transparency>true</transparency>
+</Buildings>
+<Pyramid>
+  <width>3200</width>
+  <height>800</height>
+</Pyramid>
+<Pyramid>
+  <file>images/pyrafinal2.png</file>
+  <red>193</red>
+  <green>205</green>
+  <blue>205</blue>
+  <factor>2</factor>
+  <transparency>true</transparency>
+</Pyramid>
+
+<Land>
+  <width>3200</width>
+  <height>800</height>
+</Land>
+<Land>
+  <file>images/desert1.png</file>
+  <red>193</red>
+  <green>205</green>
+  <blue>205</blue>
+  <factor>8</factor>
+  <transparency>true</transparency>
+</Land>
+
+<font name="font">
+  <file>font/pirulen.ttf</file>
+  <size>12</size>
+  <red>0</red>
+  <green>0</green>
+  <blue>255</blue>
+  <unused>0</unused>
+</font>
+
+<Aladin>
+  <file>images/aladin.png</file>
+  <startLoc x="0" y="680"/>
+  <frames>20</frames>
+  <frameInterval>100</frameInterval>
+  <speedX>-125</speedX>
+  <speedY>125</speedY>
+  <transparency>true</transparency>
+  <chunk>
+        <size>30</size>
+        <distance>200</distance>  
+  </chunk>
+</Aladin>
+
+<Enemy>
+  <file>images/guardd.png</file>
+  <startLoc x="3000" y="580"/>
+  <endLoc x="500" y="700"/>
+  <frames>12</frames>
+  <frameInterval>150</frameInterval>
+  <speedX>-68</speedX>
+  <speedY>20</speedY>
+  <transparency>true</transparency>
+  <attackDistance>200</attackDistance>
+  <chunk>
+        <size>30</size>
+        <distance>200</distance>  
+  </chunk>
+  <numberofEnemy>10</numberofEnemy>
+</Enemy>
+
+<genie>
+    <file>images/genie.png</file>
+    <startLoc x="0" y="350"/>
+    <frames>1</frames>
+    <frameInterval>150</frameInterval>
+    <speedX>-75</speedX>
+    <speedY>0</speedY>
+    <transparency>true</transparency>
+</genie>
+
+<jasmine>
+    <file>images/jasmine.png</file>
+    <startLoc x="3100" y="680"/>
+	<endLoc x="3100" y="680"/>
+    <frames>1</frames>
+    <frameInterval>150</frameInterval>
+    <speedX>0</speedX>
+    <speedY>0</speedY>
+    <transparency>true</transparency>
+</jasmine>
+
+<sword>
+    <file>images/sword.png</file>
+    <startLoc x="50" y="680"/>
+    <frames>1</frames>
+    <frameInterval>250</frameInterval>
+    <speedX>-45</speedX>
+    <speedY>0</speedY>
+    <transparency>true</transparency>
+</sword>
+
+<Hud>
+	<xval>20</xval>
+	<yval>25</yval>
+</Hud>
+
+<redorb>
+  <file>images/apple.png</file>
+  <cushion>20</cushion>
+  <scale min="0.5" max="1.5"/>
+  <src x="0" y="0"/>
+  <width>32</width>
+  <height>32</height>
+  <loc x="10" y="240"/>
+  <speed x="75" y="150"/>
+  <transparency>true</transparency>
+</redorb>
+
+<redstar>
+  <file>images/redstar20.png</file>
+  <width>20</width>
+  <height>19</height>
+  <src x="0" y="0"/>
+  <startLoc x="820" y="680"/>
+  <speed x="150" y="150"/>
+   <speedX>-45</speedX>
+    <speedY>0</speedY>
+  <transparency>true</transparency>
+</redstar>
+
+<bullet>
+    <file>images/sword.png</file>
+    <startLoc x="10" y="680"/>
+    <frames>1</frames>
+    <frameInterval>250</frameInterval>
+    <speedX>-75</speedX>
+    <speedY>0</speedY>
+    <distance> 175</distance>
+    <transparency>true</transparency>
+</bullet>
+</GameData>

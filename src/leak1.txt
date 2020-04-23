@@ -1,0 +1,111 @@
+==15996== Memcheck, a memory error detector
+==15996== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==15996== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==15996== Command: ./run
+==15996== 
+==15996== Invalid read of size 4
+==15996==    at 0x411BE9: ExtractSurface::getpixel(SDL_Surface*, int, int) const (extractSurface.cpp:54)
+==15996==    by 0x411ABF: ExtractSurface::get(SDL_Surface*, int, int, int, int) const (extractSurface.cpp:28)
+==15996==    by 0x40F82A: ExplodingSprite::makeChunks(unsigned int) (explodingSprite.cpp:76)
+==15996==    by 0x40F28F: ExplodingSprite::ExplodingSprite(Sprite const&) (explodingSprite.cpp:14)
+==15996==    by 0x404201: Enemy2Msprite::explode() (Enemy2Msprite.cpp:117)
+==15996==    by 0x41E25A: Manager::checkForCollisions() (manager.cpp:203)
+==15996==    by 0x41E3F3: Manager::update() (manager.cpp:229)
+==15996==    by 0x41EF21: Manager::play() (manager.cpp:432)
+==15996==    by 0x41C31C: main (main.cpp:6)
+==15996==  Address 0x15a9e180 is 0 bytes after a block of size 22,816 alloc'd
+==15996==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15996==    by 0x4E64BCA: SDL_CreateRGBSurface (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x411A6F: ExtractSurface::get(SDL_Surface*, int, int, int, int) const (extractSurface.cpp:20)
+==15996==    by 0x412833: FrameFactory::getFrames(std::string const&) (frameFactory.cpp:81)
+==15996==    by 0x403C4D: Enemy2Msprite::Enemy2Msprite(std::string const&, Vector2f const&, Vector2f const&, int, int) (Enemy2Msprite.cpp:64)
+==15996==    by 0x41D554: Manager::makeEnemy() (manager.cpp:98)
+==15996==    by 0x41CD18: Manager::Manager() (manager.cpp:79)
+==15996==    by 0x41C30D: main (main.cpp:5)
+==15996== 
+==15996== 
+==15996== HEAP SUMMARY:
+==15996==     in use at exit: 71,522 bytes in 552 blocks
+==15996==   total heap usage: 128,908 allocs, 128,356 frees, 218,375,666 bytes allocated
+==15996== 
+==15996== 8 bytes in 2 blocks are definitely lost in loss record 7 of 159
+==15996==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15996==    by 0x642D729: strdup (strdup.c:42)
+==15996==    by 0x7110E56: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x7113DD4: _XimEncodeICATTRIBUTE (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x710607A: _XimProtoCreateIC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x70F3884: XCreateIC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x4E75483: ??? (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x4E763B4: ??? (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x4E66C6A: SDL_VideoInit (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x4E40E7B: SDL_InitSubSystem (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x4E40EF3: SDL_Init (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x4E679C1: SDL_SetVideoMode (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996== 
+==15996== 9 bytes in 1 blocks are definitely lost in loss record 8 of 159
+==15996==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15996==    by 0x7102A0E: _XlcDefaultMapModifiers (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x7102DF5: XSetLocaleModifiers (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x4E7563B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x4E763B4: ??? (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x4E66C6A: SDL_VideoInit (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x4E40E7B: SDL_InitSubSystem (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x4E40EF3: SDL_Init (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x4E679C1: SDL_SetVideoMode (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x41B5F0: IOManager::IOManager() (ioManager.cpp:17)
+==15996==    by 0x41B449: IOManager::getInstance() (ioManager.cpp:7)
+==15996==    by 0x41C684: Manager::Manager() (manager.cpp:41)
+==15996== 
+==15996== 88 bytes in 1 blocks are definitely lost in loss record 125 of 159
+==15996==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15996==    by 0x6E979B6: pa_xmalloc (in /usr/lib/x86_64-linux-gnu/libpulse.so.0.16.2)
+==15996==    by 0x6E84481: ??? (in /usr/lib/x86_64-linux-gnu/libpulse.so.0.16.2)
+==15996==    by 0x6E8C859: pa_stream_update_timing_info (in /usr/lib/x86_64-linux-gnu/libpulse.so.0.16.2)
+==15996==    by 0x6E8CB4D: ??? (in /usr/lib/x86_64-linux-gnu/libpulse.so.0.16.2)
+==15996==    by 0x6E8E05A: ??? (in /usr/lib/x86_64-linux-gnu/libpulse.so.0.16.2)
+==15996==    by 0x946C2FD: ??? (in /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-4.0.so)
+==15996==    by 0x946C67A: pa_pdispatch_run (in /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-4.0.so)
+==15996==    by 0x6E70011: ??? (in /usr/lib/x86_64-linux-gnu/libpulse.so.0.16.2)
+==15996==    by 0x947044B: ??? (in /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-4.0.so)
+==15996==    by 0x6E83AEB: pa_mainloop_dispatch (in /usr/lib/x86_64-linux-gnu/libpulse.so.0.16.2)
+==15996==    by 0x6E83ED9: pa_mainloop_iterate (in /usr/lib/x86_64-linux-gnu/libpulse.so.0.16.2)
+==15996== 
+==15996== 192 (16 direct, 176 indirect) bytes in 1 blocks are definitely lost in loss record 134 of 159
+==15996==    at 0x4C2CE8E: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15996==    by 0x70F90FD: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x70F9657: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x70FAF04: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x70FB6BB: _XlcCreateLC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x7117C9F: _XlcDefaultLoader (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x7102C4D: _XOpenLC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x7102D97: _XlcCurrentLC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x7102DCD: XSetLocaleModifiers (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x4E755EB: ??? (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x4E763B4: ??? (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x4E66C6A: SDL_VideoInit (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996== 
+==15996== 1,688 (136 direct, 1,552 indirect) bytes in 1 blocks are definitely lost in loss record 147 of 159
+==15996==    at 0x4C2CE8E: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15996==    by 0x70F90FD: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x70F9657: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x70FAF04: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x70FB6BB: _XlcCreateLC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x711B9CF: _XlcUtf8Loader (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x7102C4D: _XOpenLC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x7102D97: _XlcCurrentLC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x7102DCD: XSetLocaleModifiers (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==15996==    by 0x4E7563B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x4E763B4: ??? (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996==    by 0x4E66C6A: SDL_VideoInit (in /usr/lib/x86_64-linux-gnu/libSDL-1.2.so.0.11.4)
+==15996== 
+==15996== LEAK SUMMARY:
+==15996==    definitely lost: 257 bytes in 6 blocks
+==15996==    indirectly lost: 1,728 bytes in 38 blocks
+==15996==      possibly lost: 0 bytes in 0 blocks
+==15996==    still reachable: 69,537 bytes in 508 blocks
+==15996==         suppressed: 0 bytes in 0 blocks
+==15996== Reachable blocks (those to which a pointer was found) are not shown.
+==15996== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==15996== 
+==15996== For counts of detected and suppressed errors, rerun with: -v
+==15996== ERROR SUMMARY: 173 errors from 6 contexts (suppressed: 0 from 0)

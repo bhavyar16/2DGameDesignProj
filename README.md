@@ -1,6 +1,7 @@
 # Project Title
 2D GAME DESIGN
 
+![gif](images/video.gif)
 Aladdin in the desert. The story of the Aladdin is fighting enemies (guards with AI). It uses sword to kill the enemies. Sound, HUD for Object pool, god mode and AI were the major additions from the last project.
 
 ## Description
@@ -24,11 +25,14 @@ The Goal of the game is to kill all the enemies and reach the end to find Daisie
 
 There is separate hud for object pool. This can seen by pressing F2.
 
-### Class Diagram of framework for animations 
-![FrameworkClassDiagram](FrameworkClassDiagram.png)
+#### Class Diagram of framework for animations 
+![FrameworkClassDiagram](images/FrameworkClassDiagram.png)
 
 ### Sprites
-![Aladdin](Aladdin.png)
 
-![Desert](Desert.png)
+#### Aladdin sprite
+![Aladdin](images/Aladdin.png)
+
+#### NightSky sprite
+![NightSky](images/NightSky.png)
 
