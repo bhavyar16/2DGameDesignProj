@@ -2,6 +2,7 @@
 2D GAME DESIGN
 
 ![gif](images/video.gif)
+
 Aladdin in the desert. The story of the Aladdin is fighting enemies (guards with AI). It uses sword to kill the enemies. Sound, HUD for Object pool, god mode and AI were the major additions from the last project.
 
 ## Description
@@ -34,5 +35,5 @@ There is separate hud for object pool. This can seen by pressing F2.
 ![Aladdin](images/Aladdin.png)
 
 #### NightSky sprite
-![NightSky](images/NightSky.png)
+![NightSky](images/NightSky.jpg)
 
