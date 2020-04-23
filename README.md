@@ -25,10 +25,10 @@ The Goal of the game is to kill all the enemies and reach the end to find Daisie
 There is separate hud for object pool. This can seen by pressing F2.
 
 ### Class Diagram of framework for animations 
-![FrameworkClassDiagram](2DGameDesignProj/FrameworkClassDiagram.png)
+![FrameworkClassDiagram](FrameworkClassDiagram.png)
 
 ### Sprites
-![Aladdin](2DGameDesignProj/Aladdin.png)
+![Aladdin](Aladdin.png)
 
-![Desert](2DGameDesignProj/Desert.png)
+![Desert](Desert.png)
 
